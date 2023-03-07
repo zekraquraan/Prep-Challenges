@@ -6,26 +6,19 @@
 //
 //  Write a function that takes an object and returns the formatted text based on the provided object as the example:
 // 
-// Input:
+// Input
   let obj = {
-    firstName: 'ellie',
+     firstName: 'Ellie',
      lastName: 'jon',
-      age: 67,
+     age: 67,
       hobby: 'Gaming and Sleeping'
-
-
-     
-
  }
-
-
 //
 //  Output: "my name is Ellie Jon I am 67 YO, and I love Gaming and Sleeping."
 
 //  Note that:
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
 //  2- The first letters of the firstName and lastName should be capital letter
-
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -36,7 +29,7 @@ const objLat = (obj) => {
 
 
     return "my name is"+" "+capitalizeFirstLetter(obj.firstName)+" "+capitalizeFirstLetter(obj.lastName)+" I am " +obj.age+" "+"YO, and I love" +" "+obj.hobby+".";
-};
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -51,31 +44,32 @@ const objLat = (obj) => {
 //  fullName and tech if the applicant has more than one year of Experience
 
 // Input:
- let cvs = [
-     {
-         firstName: "Jason",
+let cvs = [
+    {
+        firstName: "Jason",
          lastName: "James",
-         yearsOfExperience: 20,
+        yearsOfExperience: 20,
         tech: "JS"
-    },
+     },
     {
-        firstName: "Shira",
-         lastName: null,
-         yearsOfExperience: 5,
+         firstName: "Shira",
+        lastName: null,
+        yearsOfExperience: 5,
          tech: ".Net"
-   },
-    {
+     },
+     {
         firstName: "Dmitri",
         lastName: "Akkerman",
-         yearsOfExperience: 1,
-        tech: "Python"
-    },
+        yearsOfExperience: 1,
+         tech: "Python"
+     },
     {
-        firstName: "Isabella",
+         firstName: "Isabella",
         lastName: null,
-        yearsOfExperience: 7,
+         yearsOfExperience: 7,
          tech: "Java"
      }
+     
  ]
 
 // Output:
@@ -98,20 +92,20 @@ const objLat = (obj) => {
 //  1- Full name is first name + last name
 //  2- If one of the names is null don`t add it to the full name
 
-const cvFormatter = (arr) => {
     // write your code here
-    if(cvs.yearsOfExperience>1){
-    return arr.map(function(person)
-    {
-    
-var narr={};
-narr[""]=person.firstName+" "+person.lastName+" "+person.tech;
-    
-return narr;
-}
-);
-    }
-};
+
+    const cvFormatter = (arr) => {
+        {for(let value of cvs){
+            if(cvs.yearsOfExperience>1){
+                var ncv=[
+                    firstName.cvs,lastName.cvs,tech.cvs];
+                return ncv;
+                }
+                
+            }}
+            return cvFormatter(ncv);
+        };
+   
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
