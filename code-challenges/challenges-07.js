@@ -5,31 +5,35 @@
 //  Required:
 //
 //  Write a function that takes an object and returns the formatted text based on the provided object as the example:
-// 
-// Input
-  let obj = {
+
+
+ let obj = {
      firstName: 'Ellie',
      lastName: 'jon',
      age: 67,
-      hobby: 'Gaming and Sleeping'
+     hobby: 'Gaming and Sleeping'
  }
-//
+
 //  Output: "my name is Ellie Jon I am 67 YO, and I love Gaming and Sleeping."
 
 //  Note that:
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
 //  2- The first letters of the firstName and lastName should be capital letter
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
 
-const objLat = (obj) => {
+
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    
+    const objLat = (obj) => {
+        // write your code here
+        console.log(obj);
+    
+    
+        return "my name is"+" "+capitalizeFirstLetter(obj.firstName)+" "+capitalizeFirstLetter(obj.lastName)+" I am " +obj.age+" "+"YO, and I love" +" "+obj.hobby+".";
+    };
     // write your code here
-    console.log(obj);
 
-
-    return "my name is"+" "+capitalizeFirstLetter(obj.firstName)+" "+capitalizeFirstLetter(obj.lastName)+" I am " +obj.age+" "+"YO, and I love" +" "+obj.hobby+".";
-}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -47,30 +51,29 @@ const objLat = (obj) => {
 let cvs = [
     {
         firstName: "Jason",
-         lastName: "James",
+        lastName: "James",
         yearsOfExperience: 20,
         tech: "JS"
-     },
+    },
     {
-         firstName: "Shira",
+        firstName: "Shira",
         lastName: null,
         yearsOfExperience: 5,
-         tech: ".Net"
-     },
-     {
+        tech: ".Net"
+    },
+    {
         firstName: "Dmitri",
         lastName: "Akkerman",
         yearsOfExperience: 1,
-         tech: "Python"
-     },
+        tech: "Python"
+    },
     {
-         firstName: "Isabella",
+        firstName: "Isabella",
         lastName: null,
-         yearsOfExperience: 7,
-         tech: "Java"
-     }
-     
- ]
+        yearsOfExperience: 7,
+        tech: "Java"
+    }
+]
 
 // Output:
 // [
@@ -92,20 +95,24 @@ let cvs = [
 //  1- Full name is first name + last name
 //  2- If one of the names is null don`t add it to the full name
 
+const cvFormatter = (arr) => {
+    
+        const rekeyedArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      const applicant = arr[i];
+      if (applicant.yearsOfExperience > 1) {
+        if(applicant.firstName !=null && applicant.lastName !=null)
+        {
+            const fullName = `${applicant.firstName} ${applicant.lastName}`;
+            const tech = applicant.tech;
+            rekeyedArr.push({ fullName:fullName, tech:tech });
+        }
+      }
+    }
+        return rekeyedArr;
+    };
     // write your code here
 
-    const cvFormatter = (arr) => {
-        {for(let value of cvs){
-            if(cvs.yearsOfExperience>1){
-                var ncv=[
-                    firstName.cvs,lastName.cvs,tech.cvs];
-                return ncv;
-                }
-                
-            }}
-            return cvFormatter(ncv);
-        };
-   
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
