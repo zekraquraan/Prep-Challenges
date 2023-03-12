@@ -5,35 +5,32 @@
 //  Required:
 //
 //  Write a function that takes an object and returns the formatted text based on the provided object as the example:
-
-
+// 
+//Input:
  let obj = {
      firstName: 'Ellie',
      lastName: 'jon',
      age: 67,
      hobby: 'Gaming and Sleeping'
  }
-
+//
 //  Output: "my name is Ellie Jon I am 67 YO, and I love Gaming and Sleeping."
 
 //  Note that:
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
 //  2- The first letters of the firstName and lastName should be capital letter
-
-
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-    
-    const objLat = (obj) => {
-        // write your code here
-        console.log(obj);
-    
-    
-        return "my name is"+" "+capitalizeFirstLetter(obj.firstName)+" "+capitalizeFirstLetter(obj.lastName)+" I am " +obj.age+" "+"YO, and I love" +" "+obj.hobby+".";
-    };
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+const objLat = (obj) => {
     // write your code here
+    
+    console.log(obj);
+    
+    
+    return "my name is"+" "+capitalizeFirstLetter(obj.firstName)+" "+capitalizeFirstLetter(obj.lastName)+" I am " +obj.age+" "+"YO, and I love" +" "+obj.hobby+".";
 
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -96,23 +93,31 @@ let cvs = [
 //  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
-    
-        const rekeyedArr = [];
-    for (let i = 0; i < arr.length; i++) {
-      const applicant = arr[i];
-      if (applicant.yearsOfExperience > 1) {
-        if(applicant.firstName !=null && applicant.lastName !=null)
-        {
-            const fullName = `${applicant.firstName} ${applicant.lastName}`;
-            const tech = applicant.tech;
-            rekeyedArr.push({ fullName:fullName, tech:tech });
-        }
-      }
-    }
-        return rekeyedArr;
-    };
     // write your code here
-
+    const newArr=[]
+        for(let i=0 ; i<arr.length ;i++){
+            let retriveApll={
+                fullName:"",
+                tech:"",
+            }
+            if (arr[i].yearsOfExperience > 1){
+                if (arr[i].firstName == null){
+                    retriveApll.fullName= arr[i].lastName;
+                    retriveApll.tech=arr[i].tech;
+                }else if (arr[i].lastName == null){
+                    retriveApll.fullName= arr[i].firstName;
+                    retriveApll.tech=arr[i].tech;
+                }
+                else {
+                    retriveApll.fullName=arr[i].firstName+" "+arr[i].lastName;
+                    retriveApll.tech=arr[i].tech;
+                }
+                newArr.push(retriveApll);
+            }
+        }
+        return newArr;
+    
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -138,7 +143,11 @@ const cvFormatter = (arr) => {
 
 const applicationsStatics = (arr) => {
     // write your code here
+        
+
+
 };
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
