@@ -19,8 +19,6 @@
 
 const oddFiltration = (arr) => {
     // write your code here
-    const oddNumbers = arr.filter(num => num % 2 !== 0);
-    return oddNumbers;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -73,11 +71,11 @@ const oddFiltration = (arr) => {
 
 const cvsFiltration = (arr) => {
     // write your code here
-    const experiencedJSDevs = candidates.filter(candidate => {
-        return candidate.jobTitle === 'JS Developer' && candidate.yearsOfExperience > 4;
-      }).map(candidate => candidate.cv);
-      
-      
+    const result =arr.filter((object)=>object.yearsOfExperience >4);
+    console.log("hello",result)
+    return(result);
+
+
 }
 // -------------------------------------------------------------------------------------------------------
 
