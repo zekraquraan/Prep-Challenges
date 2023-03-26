@@ -73,12 +73,20 @@ const oddFiltration = (arr) => {
 
 const cvsFiltration = (arr) => {
     // write your code here
-    const experiencedJSDevs = candidates.filter(candidate => {
-        return candidate.jobTitle === 'JS Developer' && candidate.yearsOfExperience > 4;
-      }).map(candidate => candidate.cv);
+    const result =arr.filter((object)=>object.yearsOfExperience >4 && object.tech=="JS");
+
+    let newArr=[];
+    for(let i=0;i<result.length;i++){
+         newArr.push({
+                fullName: arr[i].firstName+" "+arr[i].LastName,
+                tech: arr[i].tech
+            })
+    }
+    return newArr;
+    }
       
       
-}
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -93,6 +101,10 @@ const cvsFiltration = (arr) => {
 
 const vowelsFiltration = (arr) => {
     // write your code here
+       
+const newArr=arr.filter((element)=>element.match(/[aeiou]/ig)==null);
+return newArr;
+
 } 
 // -------------------------------------------------------------------------------------------------------
 
