@@ -40,11 +40,11 @@
 
 const objectCounter = (obj) => {
     // write your code here
-    let counter = 0;
-    for (const input of inputs) {
-      if (input.status === '0') counter += 1;
-    }
-    return counter;
+    let result = obj.reduce ((acum)=>{
+      acum++;
+return acum;
+  },0)
+return result;
   }
   
   
@@ -69,7 +69,13 @@ const objectCounter = (obj) => {
 
 const stringReverse = (str) => {
     // write your code here
-    return s.split("").reduce((rev, char) => char + rev, '');
+    let arr =str.split (' ');
+let result =arr.reduce((acc, curr)=>{
+    acc.unshift(curr);
+    return acc
+}
+    ,[]);
+return result.join(" ")
 
 }
 // -------------------------------------------------------------------------------------------------------

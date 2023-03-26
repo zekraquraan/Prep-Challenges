@@ -71,11 +71,6 @@ const oddFiltration = (arr) => {
 
 const cvsFiltration = (arr) => {
     // write your code here
-    const result =arr.filter((object)=>object.yearsOfExperience >4);
-    console.log("hello",result)
-    return(result);
-
-
 }
 // -------------------------------------------------------------------------------------------------------
 
