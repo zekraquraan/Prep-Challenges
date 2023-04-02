@@ -26,7 +26,20 @@
             "source": [
                 "const freq = {};\nfor (let num of arr) {\n    freq[num] = freq[num] + 1 || 1;\n}\nconst maxFreq = Math.max(...Object.values(freq));\nreturn arr.length - maxFreq;\n"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "ReferenceError",
+                                "message": "arr is not defined",
+                                "stack": "    at <Cell 4> [2, 0]\n    at <Cell 4> [9, 46]\n    at Script.runInContext (node:vm:141:12)\n    at Script.runInNewContext (node:vm:146:17)\n    at Object.runInNewContext (node:vm:300:38)\n    at C (/home/zekraquraan/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:113345)\n    at t.execCode (/home/zekraquraan/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:114312)\n    at k.<anonymous> (/home/zekraquraan/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:142156)\n    at k.emit (node:events:513:28)\n    at k.emit (node:domain:489:12)"
+                            }
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
